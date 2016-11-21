@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel test suite" parallel="tests" thread-count="2">
+    <listeners>
+        <!--<listener class-name="utils.WebDriverListener"></listener>-->
+        <listener class-name="utils.TestListener"></listener>
+    </listeners>
+    <test name="Issue">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="JiraUITests.JiraUI"/>
+        </classes>
+    </test>
+</suite>
